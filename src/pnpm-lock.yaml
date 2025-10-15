@@ -59,7 +59,7 @@ importers:
     dependencies:
       '@playcanvas/react':
         specifier: ^0.10.2
-        version: 0.10.2(playcanvas@2.12.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 0.10.2(playcanvas@2.12.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sync-ammo@0.1.2)
       '@radix-ui/react-slot':
         specifier: ^1.2.3
         version: 1.2.3(@types/react@19.1.0)(react@19.1.0)
@@ -87,6 +87,9 @@ importers:
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
+      sync-ammo:
+        specifier: ^0.1.2
+        version: 0.1.2
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -2224,6 +2227,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  sync-ammo@0.1.2:
+    resolution: {integrity: sha512-Itf3EYf9ab8/cSVcT3ntE+do4Y57fN2fjsNXNj2RgxW58WjkXeBzL26HkPEJsFc6ly759JXU6ewVupiIH51clg==}
+
   tailwind-merge@3.3.1:
     resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
 
@@ -2654,12 +2660,14 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@playcanvas/react@0.10.2(playcanvas@2.12.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@playcanvas/react@0.10.2(playcanvas@2.12.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sync-ammo@0.1.2)':
     dependencies:
       dedent: 1.7.0
       playcanvas: 2.12.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
+    optionalDependencies:
+      sync-ammo: 0.1.2
     transitivePeerDependencies:
       - babel-plugin-macros
 
@@ -4565,6 +4573,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  sync-ammo@0.1.2: {}
 
   tailwind-merge@3.3.1: {}
 
