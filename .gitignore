@@ -2,6 +2,7 @@
 
 # cursor
 .specstory/
+.cursorindexingignore
 
 # Dependencies
 node_modules/
