@@ -36,7 +36,7 @@ export const NewView = () => {
   };
 
   return (
-    <div>
+    <>
       <div
         className="absolute top-0 left-0"
         onMouseMove={(e) => e.stopPropagation()}
@@ -47,8 +47,8 @@ export const NewView = () => {
         <Button onClick={onSwirlToggle}>Toggle Swirl</Button>
       </div>
       <Application
-        // fillMode={FILLMODE_FILL_WINDOW}
-        // resolutionMode={RESOLUTION_AUTO}
+        fillMode={FILLMODE_FILL_WINDOW}
+        resolutionMode={RESOLUTION_AUTO}
         graphicsDeviceOptions={{ antialias: false }}
         usePhysics={true}
       >
@@ -57,6 +57,6 @@ export const NewView = () => {
           <FpsCounter />
         </Suspense>
       </Application>
-    </div>
+    </>
   );
 };

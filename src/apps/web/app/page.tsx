@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Keyboard, Mouse, Hand } from "lucide-react";
-import Viewer from "@/components/playcanvas/viewer";
+// import Viewer from "@/components/playcanvas/viewer";
 import { NewView } from "@/components/playcanvas/NewView";
 
 export default function Home() {
