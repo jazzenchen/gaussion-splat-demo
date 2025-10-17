@@ -90,7 +90,7 @@ void main(void) {
     clipCorner(corner, clr.w);
 
     // animate
-    float speed = 2.0;
+    float speed = 3.0;
     float transitionDelay = 0.0;
     vec3 origin = vec3(0.0);
 

@@ -19,8 +19,8 @@ type Splat = {
 const splatData: Splat = {
   name: "school_big",
   src: "/school/meta.json",
-  position: [-1, 0, 1],
-  rotation: [90, 0, 180],
+  position: [2, 0, -15],
+  rotation: [90, 247, 180],
   fov: 60,
 };
 

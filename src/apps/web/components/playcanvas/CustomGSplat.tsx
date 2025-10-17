@@ -19,7 +19,7 @@ export const GSplat: FC<GsplatProps> = ({ asset, swirl }) => {
   const parent: PcEntity = useParent();
   const app = useApp();
   const assetRef = useRef<PcEntity | null>(null);
-  let localTime: number = 0;
+  // let localTime: number = 0;
 
   useLayoutEffect(() => {
     let handle: EventHandle;
