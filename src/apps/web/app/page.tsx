@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Keyboard, Mouse, Hand } from "lucide-react";
 import Viewer from "@/components/playcanvas/viewer";
+import { NewView } from "@/components/playcanvas/NewView";
 
 export default function Home() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -15,8 +16,9 @@ export default function Home() {
 
   return (
     <div className="w-full h-screen relative">
-      <Viewer />
-      
+      {/* <Viewer /> */}
+      <NewView />
+
       {/* Controls Guide Overlay */}
       <div className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-sm text-white p-6 rounded-lg shadow-xl max-w-sm">
         <h3 className="text-lg font-semibold mb-4 text-white/90">控制说明</h3>

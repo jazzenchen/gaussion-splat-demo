@@ -297,6 +297,14 @@ function ControlsInfo() {
 export default function App() {
   const cameraRef = useRef<pc.Entity | null>(null);
 
+  // 让相机在初始化时看向角色
+  useEffect(() => {
+    if (cameraRef.current) {
+      const avatarPosition = new pc.Vec3(18, -2.8, -38);
+      cameraRef.current.lookAt(avatarPosition);
+    }
+  }, []);
+
   return (
     <>
       <Application
