@@ -27,6 +27,8 @@ export class CharacterController extends pc.Script {
     initialize() {
         // 查找相机实体
         this.cameraEntity = this.app.root.findByName('Camera') as pc.Entity;
+
+        console.log("cameraEntity", this.cameraEntity);
         
         if (!this.cameraEntity) {
             console.error('❌ 未找到相机实体');

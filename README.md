@@ -61,3 +61,7 @@ pnpm dev
 - `pnpm build`: 构建所有应用和包用于生产环境。
 - `pnpm lint`: 对代码进行静态检查。
 - `pnpm format`: 格式化所有代码文件。
+
+## 参考资料
+https://stackblitz.com/edit/pc-react-gaussian-splats-cgrtbprm?file=package.json
+

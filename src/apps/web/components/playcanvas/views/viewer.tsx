@@ -16,8 +16,8 @@ import {
   useMaterial,
   useApp,
 } from "@playcanvas/react/hooks";
-import { CustomCameraControls } from "./custom-camera-controls";
-import { CharacterController } from "./character-controller";
+import { CustomCameraControls } from "@/components/playcanvas/scripts/custom-camera-controls";
+import { CharacterController } from "@/components/playcanvas/scripts/character-controller";
 import { useEffect, useRef, useState } from "react";
 import * as pc from "playcanvas";
 

@@ -5,7 +5,7 @@ import * as pc from "playcanvas";
 
 import { FC } from "react";
 
-import { usePostControls } from "@/components/hooks/post-controls";
+import { usePostControls } from "@/components/playcanvas/hooks/post-controls";
 
 const deepMerge = (
   target: Record<string, unknown>,

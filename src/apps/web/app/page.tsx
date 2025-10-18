@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Keyboard, Mouse, Hand } from "lucide-react";
 // import Viewer from "@/components/playcanvas/viewer";
-import { NewView } from "@/components/playcanvas/NewView";
+import { NewView } from "@/components/playcanvas/views/NewView";
 
 export default function Home() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);

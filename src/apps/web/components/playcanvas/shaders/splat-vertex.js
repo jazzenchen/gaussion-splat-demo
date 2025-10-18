@@ -8,6 +8,11 @@ varying mediump vec4 gaussianColor;
 
 uniform float uTime;
 uniform float uSwirlAmount;
+uniform float uSplatScale;
+uniform float uSpeed;
+uniform float uDelayTime;         // 延迟开始时间
+uniform float uTransitionDuration; // 过渡持续时间
+uniform vec3 view_position;
 
 #ifndef DITHER_NONE
     varying float id;
@@ -90,14 +95,26 @@ void main(void) {
     clipCorner(corner, clr.w);
 
     // animate
-    float speed = 3.0;
+    float speed = min(uSpeed, 10.0);
     float transitionDelay = 0.0;
-    vec3 origin = vec3(0.0);
+    vec3 origin = view_position;
 
     vec2 size = transitionInSize(origin, modelCenter, corner, speed, transitionDelay);
 
     // Max the splats smaller when swirling
     size = mix(size, normalize(corner.offset) * 0.08, uSwirlAmount); 
+    
+    // 计算大小过渡：从0.1到uSplatScale
+    float splatScale = 0.1; // 初始小尺寸
+    if (uTime > uDelayTime) {
+        // 计算过渡进度 (0.0 到 1.0)
+        float progress = min((uTime - uDelayTime) / uTransitionDuration, 1.0);
+        // 从0.1插值到uSplatScale
+        splatScale = mix(0.1, uSplatScale, progress);
+    }
+    
+    // 应用缩放
+    size *= splatScale; 
 
     // write output
     gl_Position = center.proj + vec4(size, 0, 0);
